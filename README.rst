@@ -50,7 +50,7 @@ All transistors except the power MOSFET are generic low-voltage low-current, e.g
 
 Select zener diode D1 for low leakage and sharp inflection near the breakdown voltage.
 
-Main selection criterion for the MOSFET is a low on resistance R_DS,on. Make sure that the maximum gate-source voltage is equal to or greater than the maximum input voltage.
+Main selection criterion for the MOSFET is a low on resistance :math:`R_{DS,on}`. Make sure that the maximum gate-source voltage is equal to or greater than the maximum input voltage.
 
 
 Schematic
