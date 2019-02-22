@@ -38,9 +38,9 @@ The diagram shows input voltage vs. output current. Note the sharp turn-on and t
 Optional high-side power switch
 -------------------------------
 
-In addition to the UVLO itself, the schematic also includes the circuit for a high-side power switch using a power MOSFET. This part of the circuit is optional and not needed if all you need is a logic signal to, for example, hold a downstream microcontroller in RESET.
+In addition to the UVLO itself, the schematic also includes the circuit for a high-side power switch using a p-channel MOSFET. This part of the circuit is optional and can be left out if all you need is a logic signal to, for example, hold a downstream microcontroller in RESET.
 
-The power switch consists of Q3-5, R7-10 and D2. A fast turn-off of the MOSFET is achieved by R8, R9 and Q4. Turning the MOSFET on occurs by pulling the gate low via D2, which can be implemented as a regular silicium diode, but has here been implemented as an LED to allow the larger forward voltage to act as extra margin between the maximum gate-source voltage of the FET, which is typically 20V. Note that the LED also functions as an indicator light for "output on", but is actually used for its electrical characteristics.
+The power switch consists of Q3-5, R7-10 and D2. A fast turn-off of the MOSFET is achieved by R8, R9 and Q4. Turning the MOSFET on occurs by pulling the gate low via D2, which can be implemented as a regular silicium diode, but has here been implemented as an LED to allow the larger forward voltage to act as extra margin between the input voltage and the maximum gate-source voltage of the FET, which is typically 20V. Note that the LED also functions as an indicator light for "output on", but is primarily used for its electrical characteristics.
 
 
 Component selection
@@ -50,7 +50,7 @@ All transistors except the power MOSFET are generic low-voltage low-current, e.g
 
 Select zener diode D1 for low leakage and sharp inflection near the breakdown voltage.
 
-Main selection criterion for the MOSFET is a low on resistance :math:`R_{DS,on}`. Make sure that the maximum gate-source voltage is equal to or greater than the maximum input voltage.
+Main selection criterion for the p-channel power MOSFET is a low on resistance :math:`R_{DS,on}`. Make sure that the maximum gate-source voltage is equal to or greater than the maximum input voltage.
 
 
 Schematic
