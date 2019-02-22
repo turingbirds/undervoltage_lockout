@@ -58,6 +58,8 @@ Schematic
 
 `Schematic (.pdf) <uvlo_schematic.pdf>`_
 
+`LTspice simulation (.asc) <uvlo_circuit_ltspice.asc>`_
+
 
 Licence
 -------
