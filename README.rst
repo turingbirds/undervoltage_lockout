@@ -9,7 +9,7 @@ This circuit was originally designed to allow Apple Magsafe adapters to power an
 Features
 --------
 
-- Input voltage range 3.3–20V
+- Power-on threshold voltage configurable between approx. 2.5 and 80 V
 - Low leakage in the off state
 - Adjustable hysteresis
 - Digital disable input
@@ -32,7 +32,7 @@ To adjust the turn-off voltage (hysteresis), adjust the feedback resistor R5.
    :scale: 60%
    :align: center
 
-Figure shows input voltage vs. output current. Note the sharp turn-on and turn-off, difference between turn-on and turn-off voltages due to hysteresis, and immunity to an added sinusoidal noise source (1V at 10 kHz).
+The diagram shows input voltage vs. output current. Note the sharp turn-on and turn-off, difference between turn-on and turn-off voltages due to hysteresis, and immunity to an added sinusoidal noise source (1V at 10 kHz).
    
 
 Optional high-side power switch
@@ -46,7 +46,7 @@ The power switch consists of Q3-5, R7-10 and D2. A fast turn-off of the MOSFET i
 Component selection
 -------------------
 
-All transistors except the power MOSFET are generic low-voltage low-current, e.g. BC337/BC327 or BC848/BC858.
+All transistors except the power MOSFET are generic low-voltage low-current, e.g. BC337/BC327 or BC848/BC858. If higher input voltages are required, select maximum collector-emitter voltage to match.
 
 Select zener diode D1 for low leakage and sharp inflection near the breakdown voltage.
 
