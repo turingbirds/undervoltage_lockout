@@ -3,7 +3,7 @@ Undervoltage lockout circuit
 
 An undervoltage lockout (UVLO) is a power monitoring circuit, that will disable a connected device when the supply voltage drops below a certain threshold.
 
-This circuit was originally designed to allow Apple Magsafe adapters to be used on any kind of device (provided matching voltage and current ratings). Apple adapters initially start in a high output impedance mode, and need to be powered on by connecting a load resistor of 39 kΩ. After the adapter powers on, the actual load may be connected. The given UVLO circuit performs exactly this function and operation has been verified using several genuine Apple adapters. For more information about Apple adapters, see Ken Shirriff's excellent teardown at <http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html>.
+This circuit was originally designed to allow Apple Magsafe adapters to power any kind of device (provided voltage and current ratings are matched). Apple adapters initially start in a high output impedance mode, and need to be powered on by connecting a load resistor of 39 kΩ. After the adapter powers on, the actual load may be connected. The given UVLO circuit performs exactly this function and operation has been verified using several genuine Apple adapters. For more information about Apple adapters, see Ken Shirriff's excellent teardown at `http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html <http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html>`_.
 
 
 Features
