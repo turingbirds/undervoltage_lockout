@@ -12,8 +12,9 @@ Features
 - Input voltage range 3.3–20V
 - Low leakage in the off state
 - Adjustable hysteresis
-- Fully discrete circuit using generic components
 - Digital disable input
+- Fully discrete circuit using generic components
+- Optional power switching circuit
 
 
 Theory of operation
@@ -25,6 +26,14 @@ To adjust the turn-on voltage of the circuit, select an appropriate value for th
 
 To adjust the turn-off voltage (hysteresis), adjust the feedback resistor R5.
 
+.. image:: uvlo_waveforms.png
+   :width: 1225
+   :height: 596
+   :scale: 60%
+   :align: center
+
+Figure shows input voltage vs. output current. Note the sharp turn-on and turn-off, difference between turn-on and turn-off voltages due to hysteresis, and immunity to an added sinusoidal noise source (1V at 10 kHz).
+   
 
 Optional high-side power switch
 -------------------------------
@@ -39,6 +48,23 @@ Component selection
 
 All transistors except the power MOSFET are generic low-voltage low-current, e.g. BC337/BC327 or BC848/BC858.
 
+Select zener diode D1 for low leakage and sharp inflection near the breakdown voltage.
+
 Main selection criterion for the MOSFET is a low on resistance R_DS,on. Make sure that the maximum gate-source voltage is equal to or greater than the maximum input voltage.
 
+
+Schematic
+---------
+
+`Schematic (.pdf) <uvlo_schematic.pdf>`_
+
+
+Licence
+-------
+
+If you use or improve on this circuit, please send me your feedback!
+
+February 2019, Charl Linssen <charl@itfromb.it>
+
+Released under the CC0 1.0 Universal ("public domain") licence.
 
